@@ -119,7 +119,7 @@ const chatGPT = async (M, client, context) => {
         await M.reply(res.content)
     } catch (error) {
         console.log(error.message)
-        return void (await reply(
+        return void (await M.reply(
             error?.response?.data?.error?.message ?? 'An error occurred while processing the request.'
         ))
     }
